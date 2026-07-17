@@ -1,6 +1,6 @@
 <img src="man/figures/slope.png" align="right" width="150" />
 
-## rgeoamb: Base para ánalise ambiental em R
+## rgeoamb: Base para análise ambiental em R
 
 rgeoamb é um pacote experimental R para análises ambientais. 
 
