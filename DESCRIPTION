@@ -1,7 +1,7 @@
 Package: rgeoamb
 Type: Package
 Title: rgeoamb: Base para análise ambiental no R.  
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: Jorge Marques
 Maintainer: Jorge Marques <marquesfilho.j.p@gmail.com>
 Description: Esse pacote fornece funções rápidas para análise ambiental. 
