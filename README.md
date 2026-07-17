@@ -1,4 +1,4 @@
-<img src="man/figures/slope.png" align="right" width="150" />
+<img src="man/figures/logo.png" align="right" width="150" />
 
 ## rgeoamb: Base para análise ambiental em R
 
