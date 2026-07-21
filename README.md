@@ -26,7 +26,7 @@ O pacote R `rgeoamb` atualmente usa as seguintes dependências abaixo e recomend
 Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistemas operacionais *Windows* e distribuições *Linux* como Debian, Ubuntu, e especificadamente **version 22.04 LTS Jammy Jellyfish**.
 
 <p>
-  <img align = "left" width = "12" height = "12" src = "https://www.clipartmax.com/middle/m2i8G6m2G6G6i8H7_windows-10-logo-report-flat-icon/" alt = "ícone">
+  <img align = "left" width = "30" height = "30" src = "https://www.clipartmax.com/middle/m2i8G6m2G6G6i8H7_windows-10-logo-report-flat-icon/" alt = "ícone">
     *Windows*
 </p>
 <br clear="left">
@@ -35,7 +35,7 @@ Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistem
 
 
 <p>
-  <img align = "left" width = "12" height = "12" src = "https://p7.hiclipart.com/preview/946/7/643/linux-distribution-computer-icons-penguins.jpg/" alt = "ícone">
+  <img align = "left" width = "30" height = "30" src = "https://p7.hiclipart.com/preview/946/7/643/linux-distribution-computer-icons-penguins.jpg/" alt = "ícone">
     *Linux*
 </p>
 <br clear="left">
