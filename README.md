@@ -25,7 +25,12 @@ O pacote R `rgeoamb` atualmente usa as seguintes dependências abaixo e recomend
 ## Instalação nos Sistemas Operacionais
 Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistemas operacionais *Windows* e distribuições *Linux* como Debian, Ubuntu, e especificadamente **version 22.04 LTS Jammy Jellyfish**.
 
-<img align="left" width="100" height="100" src="https://picsum.photos/100/100">  ### Windows
+<p>
+  <img align="left" width="24" height="24" src="https://picsum.photos/100/100" alt="ícone">
+  ## Windows
+</p>
+<br clear="left">
+
 É recomendável usar a versão R 4.5.x e Rtools 45 ou superiores para instalar o pacote `terra`, que é essencial para o funcionamento deste pacote.
 
 ### Linux
