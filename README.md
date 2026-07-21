@@ -22,7 +22,7 @@ O pacote R `rgeoamb` atualmente usa as seguintes dependências abaixo e recomend
 * **Rsagacmd**: A versão do pacote R `Rsagacmd` usada no presente pacote é **0.4.4**. Esta aplicação é necessária para fundamentar identificar às áreas de topo de morros, a partir da função *app_topo_morro*. 
 
 
-:tools: ## Instalação nos Sistemas Operacionais
+🧰 ## Instalação nos Sistemas Operacionais
 Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistemas operacionais *Windows* e distribuições *Linux* como Debian, Ubuntu, e especificadamente **version 22.04 LTS Jammy Jellyfish**.
 
 
