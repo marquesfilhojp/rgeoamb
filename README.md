@@ -31,8 +31,8 @@ Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistem
 É recomendável usar a versão R 4.5.x e Rtools 45 ou superiores para instalar o pacote `terra`, que é essencial para o funcionamento deste pacote.
 
 ```https
-## R v.4.5.x: https://cran.r-project.org/bin/windows/base/old/4.5.3/
-## Rtools45: https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html 
+R v.4.5.x: https://cran.r-project.org/bin/windows/base/old/4.5.3/
+Rtools45: https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html 
 ```
 
 ### 🐧 **Linux**
