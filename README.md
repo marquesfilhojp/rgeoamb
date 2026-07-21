@@ -25,10 +25,10 @@ O pacote R `rgeoamb` atualmente usa as seguintes dependências abaixo e recomend
 ## Instalação nos Sistemas Operacionais
 Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistemas operacionais *Windows* e distribuições *Linux* como Debian, Ubuntu, e especificadamente **version 22.04 LTS Jammy Jellyfish**.
 
-### Windows
+<img src="man/figures/logo.png" align="right" width="150" /> ### Windows
 É recomendável usar a versão R 4.5.x e Rtools 45 ou superiores para instalar o pacote `terra`, que é essencial para o funcionamento deste pacote.
 
-### Linux
+<img src="man/figures/logo.png" align="right" width="150" /> ### Linux
 
 Nas distribuições *Linux* tais como Ubuntu 22.04 LTS (Jammy Jellyfish) e outros sistemas similares, é recommendável a instalação do pacote R `terra` para o adequado funcionamento deste pacote. Recomenda-se seguir as etapas a seguir para a instalação dos pré-requisitos do pacote R `terra`. Para manipulação de dados matriciais e vetoriais, GDAL (>= 2.2.3), GEOS (>= 3.4.0), PROJ (>= 4.9.3), netcdf (>=4.1.3), sqlite3 and tbb.
 
