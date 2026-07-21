@@ -27,7 +27,7 @@ Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistem
 
 <p>
   <img align="left" width="24" height="24" src="https://picsum.photos/100/100" alt="ícone">
-  ## Windows
+  Windows
 </p>
 <br clear="left">
 
