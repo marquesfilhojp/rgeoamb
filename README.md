@@ -44,7 +44,7 @@ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
 sudo apt-get install libgdal-dev libgeos-dev libproj-dev libtbb-dev libnetcdf-dev
 ```
-
+Este projeto foi desenvolvido para contribuir na automatização de análises ambientais em `R`, de modo prático, rápido e eficiente. 
 
 
 
