@@ -4,12 +4,12 @@
 \alias{mascara_dagua}
 \title{Máscara d'água}
 \usage{
-mascara_dagua(x, y, amm, l1, l2, l3)
+mascara_dagua(green, nir, amm, l1, l2, l3)
 }
 \arguments{
-\item{x}{Entrada do arquivo matricial da banda verde (green).}
+\item{green}{Entrada do arquivo matricial da banda verde (green).}
 
-\item{y}{Entrada do arquivo matricial da banda do infravermelho (nir).}
+\item{nir}{Entrada do arquivo matricial da banda do infravermelho (nir).}
 
 \item{amm}{Númerico. Depende da função Área Mínima Mapeável}
 
@@ -20,13 +20,15 @@ mascara_dagua(x, y, amm, l1, l2, l3)
 \item{l3}{Númerico. Intervalos entre os limiares para determinar a extração de corpos hídricos.}
 }
 \description{
-\strong Máscara d'água
+\strong{Máscara d'água}
 }
 \examples{
+\dontrun{
 library(terra)
 library(rgeoamb)
-green <- terra::rast(system.file('ex/green.tif, package = 'terra'))
-nir <- terra::rast(system.file('ex/nir.tif, package = 'terra'))
+green <- terra::rast(system.file('ex/green.tif', package = 'terra'))
+nir <- terra::rast(system.file('ex/nir.tif', package = 'terra'))
 wm <- rgeoamb::mascara_dagua(green, nir, 5, 0.1, 0.10, 0.1)
 plot(wm)
+}
 }

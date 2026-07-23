@@ -4,12 +4,12 @@
 \alias{mascara_vegetacao}
 \title{Máscara de Vegetação}
 \usage{
-mascara_vegetacao(x, y, amm, l1, l2, l3)
+mascara_vegetacao(nir, red, amm, l1, l2, l3)
 }
 \arguments{
-\item{x}{Entrada do arquivo matricial da banda do infravermelho (nir).}
+\item{nir}{Entrada do arquivo matricial da banda do infravermelho (nir).}
 
-\item{y}{Entrada do arquivo matricial da banda do vermelho (nir).}
+\item{red}{Entrada do arquivo matricial da banda do vermelho (nir).}
 
 \item{amm}{Númerico. Depende da função Área Mínima Mapeável.}
 
@@ -20,13 +20,15 @@ mascara_vegetacao(x, y, amm, l1, l2, l3)
 \item{l3}{Númerico. Intervalos entre os limiares para determinar a extração das áreas vegetadas.}
 }
 \description{
-\strong Máscara de Vegetação
+\strong{Máscara de Vegetação}
 }
 \examples{
+\dontrun{
 library(terra)
 library(rgeoamb)
-nir <- terra::rast(system.file('ex/nir.tif, package = 'terra'))
-red <- terra::rast(system.file('ex/red.tif, package = 'terra'))
+nir <- terra::rast(system.file('ex/nir.tif', package = 'terra'))
+red <- terra::rast(system.file('ex/red.tif', package = 'terra'))
 vm <- rgeoamb::mascara_vegetacao(nir, red, 5, 0.33, 0.40, 0.01)
 plot(vm)
+}
 }

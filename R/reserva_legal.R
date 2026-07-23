@@ -1,17 +1,19 @@
 #' Reserva Legal
 #'
-#'\strong Cálcula se a área do imóvel condiz com o código florestal.
+#'\strong{Cálcula se a área do imóvel condiz com o código florestal.}
 #'
 #'@param x Entrada do arquivo vetorial da área do ímovel.
 #'@param y Entrada do arquivo vetorial da reserva legal.
 #'
 #'@examples
+#'\dontrun{
 #'library(sf)
 #'library(rgeoamb)
-#'area_imovel <- sf::read_sf(system.file('ex/area_imovel.shp, package = 'sf'))
-#'rl <- sf::read_sf(system.file('ex/rl.tif, package = 'sf'))
+#'area_imovel <- sf::read_sf(system.file('ex/area_imovel.shp', package = 'sf'))
+#'rl <- sf::read_sf(system.file('ex/rl.tif', package = 'sf'))
 #'rlp <- rgeoamb::reserva_legal(area_imovel, rl)
 #'plot(rlp)
+#'}
 #'@export
 reserva_legal <- function(x, y){
   ai <- sf::st_area(x)/10000

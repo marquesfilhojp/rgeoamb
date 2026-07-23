@@ -10,5 +10,13 @@ area_perimetro(aoi)
 \item{aoi}{Área de interesse, deve ser um objeto sf.}
 }
 \description{
-\strong Cálcula a área em metros e quilomêtros quadrados, hectares e perímetro.
+\strong{Cálcula a área em metros e quilomêtros quadrados, hectares e perímetro.}
+}
+\examples{
+\dontrun{
+aoi <- sf::read_sf(system.file('ex/aoi.shp', package = 'sf'))|>
+subset(ex == 'area de interesse')
+apv <- rgeoamb::area_perimetro(aoi)
+print(apv)
+}
 }

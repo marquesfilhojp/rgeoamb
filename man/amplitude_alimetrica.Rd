@@ -12,5 +12,14 @@ amplitude_alimetrica(x)
 \item{escala}{Númerico. Efetua a escala espacial.}
 }
 \description{
-\strong Cálcula a Amplitude Altimétrica.
+\strong{Cálcula a Amplitude Altimétrica}.
+}
+\examples{
+\dontrun{
+library(terra)
+library(rgeoamb)
+dem <- terra::rast(system.file('ex/elev.tif', package = 'terra'))
+amplitude <- rgeoamb::amplitude_altimetrica(dem)
+plot(amplitude)
+}
 }

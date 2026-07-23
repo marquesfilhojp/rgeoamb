@@ -12,13 +12,15 @@ reserva_legal(x, y)
 \item{y}{Entrada do arquivo vetorial da reserva legal.}
 }
 \description{
-\strong Cálcula se a área do imóvel condiz com o código florestal.
+\strong{Cálcula se a área do imóvel condiz com o código florestal.}
 }
 \examples{
+\dontrun{
 library(sf)
 library(rgeoamb)
-area_imovel <- sf::read_sf(system.file('ex/area_imovel.shp, package = 'sf'))
-rl <- sf::read_sf(system.file('ex/rl.tif, package = 'sf'))
+area_imovel <- sf::read_sf(system.file('ex/area_imovel.shp', package = 'sf'))
+rl <- sf::read_sf(system.file('ex/rl.tif', package = 'sf'))
 rlp <- rgeoamb::reserva_legal(area_imovel, rl)
 plot(rlp)
+}
 }

@@ -7,22 +7,24 @@
 app_corpos_hidricos(green, nir, limiar)
 }
 \arguments{
+\item{green}{Entrada do arquivo matricial da banda verde (green)}
+
+\item{nir}{Entrada do arquivo matricial da banda do infravermelho (nir)}
+
 \item{limiar}{Númerico. Limiar para determinar a extração de corpos hídricos}
-
-\item{x}{Entrada do arquivo matricial da banda verde (green)}
-
-\item{y}{Entrada do arquivo matricial da banda do infravermelho (nir)}
 
 \item{buffer}{Númerico. Área de influência.}
 }
 \description{
-\strong APP Corpos Hídricos
+\strong{APP Corpos Hídricos}
 }
 \examples{
+\dontrun{
 library(terra)
 library(rgeoamb)
-green <- terra::rast(system.file('ex/green.tif, package = 'terra'))
-nir <- terra::rast(system.file('ex/nir.tif, package = 'terra'))
+green <- terra::rast(system.file('ex/green.tif', package = 'terra'))
+nir <- terra::rast(system.file('ex/nir.tif', package = 'terra'))
 app_ch <- rgeoamb::app_corpos_hídricos(green, nir, 0.1)
 plot(app_ch)
+}
 }

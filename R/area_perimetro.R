@@ -1,16 +1,18 @@
 #'Área e Perímetro
 #'
-#'\strong Cálcula a área em metros e quilomêtros quadrados, hectares e perímetro.
+#'\strong{Cálcula a área em metros e quilomêtros quadrados, hectares e perímetro.}
 #'
 #'@param aoi Área de interesse, deve ser um objeto sf.
 #'
 #'@examples
-#'library(sf)
-#'library(rgeoamb)
-#'aoi <- sf::read_sf(system.file('ex/aoi.shp, package = 'sf')|>
+#'\dontrun{
+# 'library(sf)
+# 'library(rgeoamb)
+#' aoi <- sf::read_sf(system.file('ex/aoi.shp', package = 'sf'))|>
 #' subset(ex == 'area de interesse')
 #' apv <- rgeoamb::area_perimetro(aoi)
 #' print(apv)
+#' }
 #' @export
 area_perimetro <- function(aoi){
   m2 <- sf::st_transform(aoi, crs = 'EPSG:31983')%>%
