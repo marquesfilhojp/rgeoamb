@@ -46,6 +46,4 @@ sudo apt-get install libgdal-dev libgeos-dev libproj-dev libtbb-dev libnetcdf-de
 ```
 Este projeto foi desenvolvido para contribuir na automatização de análises ambientais em `R`, de modo prático, rápido e eficiente. 
 
-## Referências Bibliográficas 
-
 
