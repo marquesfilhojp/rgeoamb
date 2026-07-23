@@ -1,15 +1,17 @@
 #' APP Topo de Morro
 #'
-#'\strong APP Topo de Morro
+#'\strong{APP Topo de Morro}
 #'
 #'@param x Entrada do arquivo matricial MDE.
 #'
 #'@examples
+#'\dontrun{
 #'library(terra)
 #'library(rgeoamb)
-#'dem <- terra::rast(system.file('ex/elev.tif, package = 'terra'))
+#'dem <- terra::rast(system.file('ex/elev.tif', package = 'terra'))
 #'app_tm <- rgeoamb::app_topo_morro(dem)
 #'plot(app_tm)
+#'}
 #'@export
 app_topo_morro <- function(x){
   dem_inverse <- x * -1

@@ -1,6 +1,6 @@
 # 'Área Mínima Mapeável
 #'
-#'\strong Área Mínima Mapeável
+#'\strong{Área Mínima Mapeável}
 #'
 #'Calcula a Área Mínima Mapeável
 #'
@@ -8,8 +8,10 @@
 #'@param res Númerico. Resolução da imagem.
 #'
 #'@examples
+#'\dontrun{
 #' library(rgeoamb)
 #' amm <- rgeoamb::area_minima_mapeavel(25000, 10)
+#' }
 #'@export
 area_minima_mapeavel <- function(escala, res){
   ds <- (scale * 0.002)**2

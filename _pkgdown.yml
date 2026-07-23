@@ -1,0 +1,8 @@
+url: https://marquesfilhojp.github.io/rgeoamb/
+
+template:
+  bootstrap: 5
+
+home:
+  title: "rgeoamb: Bases para análises ambientais em R"
+  description: "Funções automáticas para análise ambiental no R."

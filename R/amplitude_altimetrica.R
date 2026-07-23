@@ -1,16 +1,18 @@
 #' Amplitude Altimétrica
 #'
-#' \strong Cálcula a Amplitude Altimétrica.
+#' \strong{Cálcula a Amplitude Altimétrica}.
 #'
 #' @param x Entrada do arquivo matricial do MDE.
 #' @param escala Númerico. Efetua a escala espacial.
 #'
 #' @examples
+#' \dontrun{
 #' library(terra)
 #' library(rgeoamb)
-#' dem <- terra::rast(system.file('ex/elev.tif, package = 'terra'))
-#' amplitude <- rgeoamb::amplitude_altimetrica(x)
+#' dem <- terra::rast(system.file('ex/elev.tif', package = 'terra'))
+#' amplitude <- rgeoamb::amplitude_altimetrica(dem)
 #' plot(amplitude)
+#' }
 #' @export
 amplitude_alimetrica <- function(x){
   min <- terra::focal(x, escala, 'min')
