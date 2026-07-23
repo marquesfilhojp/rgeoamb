@@ -3,7 +3,7 @@ Type: Package
 Title: Base para análise ambiental no R.
 Version: 0.1.2
 Authors@R: 
-    person("Jorge da Paixão Marques Filho", 
+    person("Jorge da Paixão", "Marques Filho", 
            email = "marquesfilho.j.p@gmail.com", 
            role = c("aut", "cre"))
 Description: Funções automáticas para análise ambiental no R.
