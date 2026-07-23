@@ -1,4 +1,4 @@
-# 'Área Mínima Mapeável
+#' Área Mínima Mapeável
 #'
 #'\strong{Área Mínima Mapeável}
 #'

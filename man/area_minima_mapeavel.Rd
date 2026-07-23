@@ -2,7 +2,7 @@
 % Please edit documentation in R/area_minima_mapeavel.R
 \name{area_minima_mapeavel}
 \alias{area_minima_mapeavel}
-\title{\strong{Área Mínima Mapeável}}
+\title{Área Mínima Mapeável}
 \usage{
 area_minima_mapeavel(escala, res)
 }
@@ -12,6 +12,9 @@ area_minima_mapeavel(escala, res)
 \item{res}{Númerico. Resolução da imagem.}
 }
 \description{
+\strong{Área Mínima Mapeável}
+}
+\details{
 Calcula a Área Mínima Mapeável
 }
 \examples{
