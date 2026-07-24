@@ -2,7 +2,7 @@
 % Please edit documentation in R/app_topo_morro.R
 \name{app_topo_morro}
 \alias{app_topo_morro}
-\title{APP Topo de Morro}
+\title{APP Topo de Morros}
 \usage{
 app_topo_morro(x)
 }
@@ -10,7 +10,7 @@ app_topo_morro(x)
 \item{x}{Entrada do arquivo matricial MDE.}
 }
 \description{
-\strong{APP Topo de Morro}
+\strong{APP Topo de Morros}
 }
 \examples{
 \dontrun{

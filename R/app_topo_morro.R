@@ -1,6 +1,6 @@
-#' APP Topo de Morro
+#' APP Topo de Morros
 #'
-#'\strong{APP Topo de Morro}
+#'\strong{APP Topo de Morros}
 #'
 #'@param x Entrada do arquivo matricial MDE.
 #'
