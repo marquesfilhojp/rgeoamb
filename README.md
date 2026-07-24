@@ -1,4 +1,4 @@
-<img src = "logo.png" alt = "logo" style = "float: right; vertical-align: top; margin-left: 15px; width: 150px;" />
+<img src = "man/figures/logo.png" alt = "logo" style = "float: right; vertical-align: top; margin-left: 15px; width: 150px;" />
 
 ## *rgeoamb*: Bases para análises ambientais em R
 
