@@ -12,8 +12,8 @@
 <link rel="icon" sizes="any" href="favicon.ico">
 <link rel="manifest" href="site.webmanifest">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="rgeoamb: Bases para análises ambientais em R">
 <meta name="description" content="Funções automáticas para análise ambiental no R.">
@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">rgeoamb</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +53,11 @@
 <div class="row">
   <main id="main" class="col-md-9"><p><img src="reference/figures/logo.png" alt="logo" style="float: right; vertical-align: top; margin-left: 15px; width: 150px;"></p>
 <div class="section level2">
-<h2 id="rgeoamb-bases-para-análises-ambientais-em-r">
-<em>rgeoamb</em>: Bases para análises ambientais em R<a class="anchor" aria-label="anchor" href="#rgeoamb-bases-para-an%C3%A1lises-ambientais-em-r"></a>
+<h2 id="rgeoamb-frameworks-for-environmental-analyses-in-r">
+<em>rgeoamb</em>: Frameworks for Environmental Analyses in R<a class="anchor" aria-label="anchor" href="#rgeoamb-frameworks-for-environmental-analyses-in-r"></a>
 </h2>
 <div align="justify">
-<p><em>rgeoamb</em> é um pacote R para análises ambientais, para delimitação de forma automática de <strong>Áreas de Preservação Permanente</strong> (APPs). Por exemplo, <strong>Topo de Morros</strong>, <strong>Corpos Hídricos</strong> (Lagos e Lagoas), <strong>APPs &gt; 45°</strong> nas encostas e também <strong>Áreas de Uso Restrito</strong>, <strong>Cálculo de Área e Perímetro</strong>, <strong>Detecção de Áreas Verdes</strong> e o <strong>Percentual das Reservas Legais sobre Imóveis Rurais</strong>. Em breve as funções automáticas para <strong>Mapeamento de Cobertura e Uso da Terra por Aprendizado de Máquina</strong> (Pixel ou Objeto) e <strong>Análise de Séries Temporais com Sensoriamento Remoto</strong>.</p>
+<p><em>rgeoamb</em> is an R package for environmental analysis designed to automatically delineate <strong>Permanent Preservation Areas</strong> (APPs). Key functionalities include the extraction of <strong>Area and Perimeter Calculations</strong>, <strong>APPs on slope angles &gt; 45°</strong>, <strong>Green Area Detection</strong> (<em>Áreas Verdes</em>), <strong>Hilltops</strong> (<em>APPs de Topo de Morros</em>), <strong>Land Use and Land Cover (LULC) Mapping via Machine Learning</strong> (Pixel-Based), <strong>Legal Reserve Compliance Percentages on Rural Properties</strong>, <strong>Restricted Use Areas</strong> (<em>Áreas de Uso Restrito</em>), <strong>Water Bodies</strong> (<em>APPs de Corpos Hídricos</em>), <strong>Water Mask</strong> (<em>Máscara d’água</em>) as well as upcoming features will introduce automated tools for <strong>Remote Sensing Time Series Analysis</strong>.</p>
 </div>
 <div class="section level4">
 <h4 id="for-instalation">For instalation:<a class="anchor" aria-label="anchor" href="#for-instalation"></a>
@@ -70,53 +70,53 @@
 </div>
 </div>
 <div class="section level2">
-<h2 id="dependências">Dependências<a class="anchor" aria-label="anchor" href="#depend%C3%AAncias"></a>
+<h2 id="dependencies">Dependencies<a class="anchor" aria-label="anchor" href="#dependencies"></a>
 </h2>
 <div align="justify">
-<p>O pacote R <code>rgeoamb</code> atualmente usa as seguintes dependências abaixo e recomendamos, os requisitos necessários para a instalação do pacote R <code>terra</code> e do software <em>System for Automated Geoscientific Analyses</em> 2.3.2, 5.0.0 - 9.2 em Windows (x64) e Linux, de modo isolado ou em conjunto ao ambiente <em>QGIS</em> para o adequado funcionamento.</p>
+<p>The <code>rgeoamb</code> R package currently relies on the dependencies listed below. For proper functionality, we recommend meeting the necessary requirements for installing the <code>terra</code> R package and the <em>System for Automated Geoscientific Analyses</em> (SAGA GIS, versions 2.3.2, 5.0.0 – 9.2) on Windows (x64) and Linux, either standalone or integrated within the <em>QGIS</em> environment.</p>
 </div>
 <div align="justify">
-<p><strong>terra</strong>: A versão do pacote R <code>terra</code> usada no presente pacote é <strong>1.9-34</strong>. A base do nosso pacota para operações de manipulação de dados matriciais, desde operações básicas de algebra booleana até estrutura condicionantes, para identificar às áreas de vegetação, de corpos hídricos e as diferentes Áreas de Preservação Permanente.</p>
+<p><strong>caret</strong>: The version of the <code>caret</code> R package used in this package is <strong>7.0.1</strong>. This package is required to support land use and land cover identification through the <em>landuse_landcover</em> function.</p>
 </div>
 <div align="justify">
-<p><strong>sf</strong>: A versão do pacote R <code>sf</code> usada no presente pacote é <strong>1.1-11</strong>. Este pacote é fundamental somente parra as diversas aplicações com dados vetoriais e integração com pacotes de tratamento para dados tabulares.</p>
+<p><strong>Rsagacmd</strong>: The version of the <code>Rsagacmd</code> R package used in this package is <strong>0.4.4</strong>. This package is required to support hilltop identification through the <em>hilltops</em> function.</p>
 </div>
 <div align="justify">
-<p><strong>spatialEco</strong>: A versão do pacote R <code>spatialEco</code> usada no presente pacote é <strong>2.0-5</strong>. Somente é necessário para efetuar a operação geométrica de dissolução, a nível de dados vetoriais.</p>
+<p><strong>terra</strong>: The version of the <code>terra</code> R package used in this package is <strong>1.9-34</strong>. It serves as the foundation for raster data manipulation operations—ranging from basic Boolean algebra to conditional structures—to identify vegetation cover, water bodies, and various Permanent Preservation Areas (APPs).</p>
 </div>
 <div align="justify">
-<p><strong>Rsagacmd</strong>: A versão do pacote R <code>Rsagacmd</code> usada no presente pacote é <strong>0.4.4</strong>. Esta aplicação é necessária para fundamentar identificar às áreas de topo de morros, a partir da função <em>app_topo_morro</em>.</p>
+<p><strong>sf</strong>: The version of the <code>sf</code> R package used in this package is <strong>1.1-11</strong>. This package is essential for all vector data operations and seamless integration with tabular data processing tools.</p>
+</div>
+<div align="justify">
+<p><strong>spatialEco</strong>: The version of the <code>spatialEco</code> R package used in this package is <strong>2.0-5</strong>. It is required specifically for vector geometry dissolve operations.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="gear-instalação-nos-sistemas-operacionais">⚙️ <strong>Instalação nos Sistemas Operacionais</strong>
-<a class="anchor" aria-label="anchor" href="#gear-instala%C3%A7%C3%A3o-nos-sistemas-operacionais"></a>
+<h2 id="gear-installation-by-operating-system">⚙️ Installation by Operating System<a class="anchor" aria-label="anchor" href="#gear-installation-by-operating-system"></a>
 </h2>
 <div align="justify">
-<p>Atualmente, o pacote R <em>rgeoamb</em> v.0.1.0 foi desenvolvido somente para os sistemas operacionais <em>Windows</em> e distribuições <em>Linux</em> como Debian, Ubuntu, e especificadamente <strong>version 22.04 LTS Jammy Jellyfish</strong>.</p>
+<p>Currently, the R package <em>slope</em> v.0.4.5 has been developed solely for <em>Windows</em> operating systems and <em>Linux</em> distributions such as Debian, Ubuntu, and Linux—specifically <strong>version 22.04 LTS Jammy Jellyfish</strong>.</p>
 </div>
 <div class="section level3">
-<h3 id="window-windows">🪟 <strong>Windows</strong>
-<a class="anchor" aria-label="anchor" href="#window-windows"></a>
+<h3 id="window-windows">🪟 Windows<a class="anchor" aria-label="anchor" href="#window-windows"></a>
 </h3>
 <div align="justify">
-<p>É recomendável usar a versão R 4.5.x e Rtools 45 ou superiores para instalar o pacote <code>terra</code>, que é essencial para o funcionamento deste pacote.</p>
+<p>It is recommended to use R version 4.5.x or higher and Rtools 45 or higher to install the R package <code>terra</code>, which is essential for the operation of this package.</p>
 </div>
 <pre class="https"><code>R v.4.5.x: https://cran.r-project.org/bin/windows/base/old/4.5.3/
 Rtools45: https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html </code></pre>
 </div>
 <div class="section level3">
-<h3 id="penguin-linux">🐧 <strong>Linux</strong>
-<a class="anchor" aria-label="anchor" href="#penguin-linux"></a>
+<h3 id="penguin-linux">🐧 Linux<a class="anchor" aria-label="anchor" href="#penguin-linux"></a>
 </h3>
 <div align="justify">
-<p>Nas distribuições <em>Linux</em> como Ubuntu 22.04 LTS (Jammy Jellyfish) e outros sistemas similares, é recommendável a instalação do pacote R <code>terra</code> para o adequado funcionamento deste pacote. Recomenda-se seguir as etapas a seguir para a instalação dos pré-requisitos do pacote R <code>terra</code>. Para manipulação de dados matriciais e vetoriais, GDAL (&gt;= 2.2.3), GEOS (&gt;= 3.4.0), PROJ (&gt;= 4.9.3), netcdf (&gt;=4.1.3), sqlite3 and tbb.</p>
+<p>On <em>Linux</em> distributions such as Ubuntu 22.04 LTS (Jammy Jellyfish) and other similar systems, it is recommended to initially install the R <code>terra</code> package to ensure the proper functioning of this package, for manipulating vector and raster data with following libraries GDAL (&gt;= 2.2.3), GEOS (&gt;= 3.4.0), PROJ (&gt;= 4.9.3), netcdf (&gt;=4.1.3), sqlite3 and tbb.</p>
 </div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository ppa:ubuntugis/ubuntugis-unstable</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">sudo</span> apt-get install libgdal-dev libgeos-dev libproj-dev libtbb-dev libnetcdf-dev</span></code></pre></div>
 <div align="justify">
-<p>Este projeto foi desenvolvido para contribuir na automatização de análises ambientais em <code>R</code>, de modo prático, rápido e eficiente.</p>
+<p>This project was developed to contribute to the automation of environmental analyses in <code>R</code> in a practical, fast, and efficient way.</p>
 </div>
 </div>
 </div>
@@ -132,7 +132,7 @@ Rtools45: https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html </c
 <div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li>GPL (&gt;= 2)</li>
+<li>GPL (&gt;= 3)</li>
 </ul>
 </div>
 

@@ -1,20 +1,18 @@
-#' APP > 45°
+#'APP > 45°
 #'
-#'\strong{APP > 45°}
+#'Identifies Permanent Preservation Areas (APPs) in slope angles > 45°.
 #'
-#'@param x Entrada do arquivo matricial MDE.
+#'@param x Input DEM raster file.
 #'
 #'@examples
-#'\dontrun{
 #'library(terra)
 #'library(rgeoamb)
 #'dem <- terra::rast(system.file('ex/elev.tif', package = 'terra'))
 #'app <- rgeoamb::app_45(dem)
 #'plot(app)
-#'}
 #'@export
 app_45 <- function(x){
-  declividade <- terra::terrain(x, 'slope', neighbors = 8, unit = 'degrees')
-  app <- terra::ifel(declividade >= 45, 1,0)
+  slope_angle <- terra::terrain(x, 'slope', neighbors = 8, unit = 'degrees')
+  app <- terra::ifel(slope_angle >= 45, 1, NA)
   return(app)
 }

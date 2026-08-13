@@ -7,17 +7,15 @@
 app_45(x)
 }
 \arguments{
-\item{x}{Entrada do arquivo matricial MDE.}
+\item{x}{Input DEM raster file.}
 }
 \description{
-\strong{APP > 45°}
+Identifies Permanent Preservation Areas (APPs) in slope angles > 45°.
 }
 \examples{
-\dontrun{
 library(terra)
 library(rgeoamb)
 dem <- terra::rast(system.file('ex/elev.tif', package = 'terra'))
 app <- rgeoamb::app_45(dem)
 plot(app)
-}
 }
