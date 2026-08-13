@@ -53,7 +53,7 @@ The `rgeoamb` R package currently relies on the dependencies listed below. For p
 ## ⚙️ Installation by Operating System
 
 <div align="justify">
-Currently, the R package *rgeoamb* v.0.2.6 has been developed solely for *Windows* operating systems and *Linux* distributions such as Debian, Ubuntu, and Linux—specifically **version 22.04 LTS Jammy Jellyfish**.
+Currently, the R package *rgeoamb* v.0.2.7 has been developed solely for *Windows* operating systems and *Linux* distributions such as Debian, Ubuntu, and Linux—specifically **version 22.04 LTS Jammy Jellyfish**.
 </div>
 
 ### 🪟 Windows

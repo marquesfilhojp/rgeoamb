@@ -1,7 +1,7 @@
 Package: rgeoamb
 Type: Package
 Title: Frameworks for Environmental Analyses in R.
-Version: 0.2.6
+Version: 0.2.7
 Authors@R: 
     person("Jorge da Paixão", "Marques Filho", 
            email = "marquesfilho.j.p@gmail.com", 
@@ -21,3 +21,5 @@ Imports:
     Rsagacmd,
     httr2,
     rstac,
+Depends: 
+    R (>= 3.5)
