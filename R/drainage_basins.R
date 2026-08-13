@@ -12,7 +12,14 @@
 #'db <- rgeoamb::drainage_basins(dem)
 #'@export
 drainage_basins <- function(x, proj){
-  saga <- Rsagacmd::saga_gis()
+  os <- Sys.info()["sysname"]
+  if (os == "Windows") {
+    saga <- Rsagacmd::saga_gis(saga_bin = "C:/Program Files/SAGA/saga_cmd.exe")
+  } else if (os == "Linux") {
+    saga <- Rsagacmd::saga_gis()
+  } else {
+    saga <- Rsagacmd::saga_gis() # Fallback para macOS/Darwin
+  }
   basin_inverse <- saga$ta_compound$basic_terrain_analysis(elevation = x,
                                                            basins = tempfile(fileext = '.gpkg'))
   basins <- sf::st_transform(basin_inverse$basins)|>

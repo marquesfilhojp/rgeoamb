@@ -14,7 +14,14 @@
 #'@export
 hilltops <- function(x, proj){
   dem_inverse <- x * -1
-  saga <- Rsagacmd::saga_gis()
+  os <- Sys.info()["sysname"]
+  if (os == "Windows") {
+    saga <- Rsagacmd::saga_gis(saga_bin = "C:/Program Files/SAGA/saga_cmd.exe")
+  } else if (os == "Linux") {
+    saga <- Rsagacmd::saga_gis()
+  } else {
+    saga <- Rsagacmd::saga_gis()
+  }
   basin_inverse <- saga$ta_compound$basic_terrain_analysis(elevation = dem_inverse,
                                                            basins = tempfile(fileext = '.gpkg'))
   basins <- sf::st_transform(basin_inverse$basins)|>
