@@ -27,7 +27,14 @@ The `rgeoamb` R package currently relies on the dependencies listed below. For p
 </div>
 
 <div align = "justify">
-**Rsagacmd**: The version of the `Rsagacmd` R package used in this package is **0.4.4**. This package is required to support hilltop identification through the *hilltops* function.
+**httr2**: The version of the `httr2` R package used in this package is **1.3.0**. This package is required to fetch DEMs via the OpenTopography API in the *elevr* function.
+</div>
+
+<div align = "justify">
+**Rsagacmd**: The version of the `Rsagacmd` R package used in this package is **0.4.3**. This package is required to support hilltop identification through the *hilltops* function.
+</div>
+
+**rstac**: The version of the `rstac` R package used in this package is **1.0.1**. This package is required to fetch images via the Planetary Computer Microsoft API in the *download_stac_services* function.
 </div>
 
 <div align = "justify">
@@ -35,18 +42,18 @@ The `rgeoamb` R package currently relies on the dependencies listed below. For p
 </div>
 
 <div align = "justify">
-**sf**: The version of the `sf` R package used in this package is **1.1-11**. This package is essential for all vector data operations and seamless integration with tabular data processing tools.
+**sf**: The version of the `sf` R package used in this package is **1.1-2**. This package is essential for all vector data operations and seamless integration with tabular data processing tools.
 </div>
 
 <div align = "justify">
-**spatialEco**: The version of the `spatialEco` R package used in this package is **2.0-5**. It is required specifically for vector geometry dissolve operations.
+**spatialEco**: The version of the `spatialEco` R package used in this package is **2.0-3**. It is required specifically for vector geometry dissolve operations.
 </div>
 
 
 ## ⚙️ Installation by Operating System
 
 <div align="justify">
-Currently, the R package *slope* v.0.4.5 has been developed solely for *Windows* operating systems and *Linux* distributions such as Debian, Ubuntu, and Linux—specifically **version 22.04 LTS Jammy Jellyfish**.
+Currently, the R package *rgeoamb* v.0.2.6 has been developed solely for *Windows* operating systems and *Linux* distributions such as Debian, Ubuntu, and Linux—specifically **version 22.04 LTS Jammy Jellyfish**.
 </div>
 
 ### 🪟 Windows
