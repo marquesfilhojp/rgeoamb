@@ -1,11 +1,12 @@
 <img src = "man/figures/logo.png" alt = "logo" style = "float: right; vertical-align: top; margin-left: 15px; width: 150px;" />
 
-## *rgeoamb*: Bases para análises ambientais em R
+## *rgeoamb*: Frameworks for Environmental Analyses in R
 
 <div align = "justify">
-*rgeoamb* é um pacote R para análises ambientais, para delimitação de forma automática de **Áreas de Preservação Permanente** (APPs). 
-Por exemplo, **Topo de Morros**, **Corpos Hídricos** (Lagos e Lagoas), **APPs > 45°** nas encostas e também **Áreas de Uso Restrito**, **Cálculo de Área e Perímetro**, **Detecção de Áreas Verdes** e o **Percentual das Reservas Legais sobre Imóveis Rurais**. 
-Em breve as funções automáticas para **Mapeamento de Cobertura e Uso da Terra por Aprendizado de Máquina** (Pixel ou Objeto) e **Análise de Séries Temporais com Sensoriamento Remoto**. 
+*rgeoamb* is an R package for environmental analysis designed to automatically delineate **Permanent Preservation Areas** (APPs). 
+Key functionalities include the extraction of **Area and Perimeter Calculations**, **APPs on slope angles > 45°**, **Green Area Detection** (*Áreas Verdes*), **Hilltops** (*APPs de Topo de Morros*), **Land Use and Land Cover (LULC) Mapping via Machine Learning** (Pixel-Based),
+**Legal Reserve Compliance Percentages on Rural Properties**, **Restricted Use Areas** (*Áreas de Uso Restrito*), **Water Bodies** (*APPs de Corpos Hídricos*), **Water Mask** (*Máscara d'água*) as well as
+upcoming features will introduce automated tools for **Remote Sensing Time Series Analysis**.
 </div>
 
 #### For instalation:
@@ -14,40 +15,44 @@ install.packages('remotes')
 library(remotes)
 remotes::install_github("marquesfilhojp/rgeoamb")
 library(rgeoamb)
-
 ```
-## Dependências
+## Dependencies
 
 <div align = "justify">
-O pacote R `rgeoamb` atualmente usa as seguintes dependências abaixo e recomendamos, os requisitos necessários para a instalação do pacote R `terra` e do software *System for Automated Geoscientific Analyses*  2.3.2, 5.0.0 - 9.2 em Windows (x64) e Linux, de modo isolado ou em conjunto ao ambiente *QGIS* para o adequado funcionamento. 
+The `rgeoamb` R package currently relies on the dependencies listed below. For proper functionality, we recommend meeting the necessary requirements for installing the `terra` R package and the *System for Automated Geoscientific Analyses* (SAGA GIS, versions 2.3.2, 5.0.0 – 9.2) on Windows (x64) and Linux, either standalone or integrated within the *QGIS* environment.
 </div>
 
 <div align = "justify">
-**terra**: A versão do pacote R `terra` usada no presente pacote é **1.9-34**. A base do nosso pacota para operações de manipulação de dados matriciais, desde operações básicas de algebra booleana até estrutura condicionantes, para identificar às áreas de vegetação, de corpos hídricos e as diferentes Áreas de Preservação Permanente. 
+**caret**: The version of the `caret` R package used in this package is **7.0.1**. This package is required to support land use and land cover identification through the *landuse_landcover* function.
 </div>
 
 <div align = "justify">
-**sf**: A versão do pacote R `sf` usada no presente pacote é **1.1-11**. Este pacote é fundamental somente parra as diversas aplicações com dados vetoriais e integração com pacotes de tratamento para dados tabulares. 
+**Rsagacmd**: The version of the `Rsagacmd` R package used in this package is **0.4.4**. This package is required to support hilltop identification through the *hilltops* function.
 </div>
 
 <div align = "justify">
-**spatialEco**: A versão do pacote R  `spatialEco` usada no presente pacote é **2.0-5**. Somente é necessário para efetuar a operação geométrica de dissolução, a nível de dados vetoriais. 
+**terra**: The version of the `terra` R package used in this package is **1.9-34**. It serves as the foundation for raster data manipulation operations—ranging from basic Boolean algebra to conditional structures—to identify vegetation cover, water bodies, and various Permanent Preservation Areas (APPs).
 </div>
 
 <div align = "justify">
-**Rsagacmd**: A versão do pacote R `Rsagacmd` usada no presente pacote é **0.4.4**. Esta aplicação é necessária para fundamentar identificar às áreas de topo de morros, a partir da função *app_topo_morro*. 
+**sf**: The version of the `sf` R package used in this package is **1.1-11**. This package is essential for all vector data operations and seamless integration with tabular data processing tools.
 </div>
 
-## ⚙️ **Instalação nos Sistemas Operacionais**
-
 <div align = "justify">
-Atualmente, o pacote R *rgeoamb* v.0.1.0 foi desenvolvido somente para os sistemas operacionais *Windows* e distribuições *Linux* como Debian, Ubuntu, e especificadamente **version 22.04 LTS Jammy Jellyfish**.
+**spatialEco**: The version of the `spatialEco` R package used in this package is **2.0-5**. It is required specifically for vector geometry dissolve operations.
 </div>
 
-### 🪟 **Windows**
+
+## ⚙️ Installation by Operating System
+
+<div align="justify">
+Currently, the R package *slope* v.0.4.5 has been developed solely for *Windows* operating systems and *Linux* distributions such as Debian, Ubuntu, and Linux—specifically **version 22.04 LTS Jammy Jellyfish**.
+</div>
+
+### 🪟 Windows
 
 <div align = "justify">
-É recomendável usar a versão R 4.5.x e Rtools 45 ou superiores para instalar o pacote `terra`, que é essencial para o funcionamento deste pacote.
+It is recommended to use R version 4.5.x or higher and Rtools 45 or higher to install the R package `terra`, which is essential for the operation of this package.
 </div>
 
 ```https
@@ -55,10 +60,10 @@ R v.4.5.x: https://cran.r-project.org/bin/windows/base/old/4.5.3/
 Rtools45: https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html 
 ```
 
-### 🐧 **Linux**
+### 🐧 Linux
 
 <div align = "justify">
-Nas distribuições *Linux* como Ubuntu 22.04 LTS (Jammy Jellyfish) e outros sistemas similares, é recommendável a instalação do pacote R `terra` para o adequado funcionamento deste pacote. Recomenda-se seguir as etapas a seguir para a instalação dos pré-requisitos do pacote R `terra`. Para manipulação de dados matriciais e vetoriais, GDAL (>= 2.2.3), GEOS (>= 3.4.0), PROJ (>= 4.9.3), netcdf (>=4.1.3), sqlite3 and tbb.
+On *Linux* distributions such as Ubuntu 22.04 LTS (Jammy Jellyfish) and other similar systems, it is recommended to initially install the R `terra` package to ensure the proper functioning of this package, for manipulating vector and raster data with following libraries GDAL (>= 2.2.3), GEOS (>= 3.4.0), PROJ (>= 4.9.3), netcdf (>=4.1.3), sqlite3 and tbb.
 </div>
 
 ```bash
@@ -67,7 +72,5 @@ sudo apt-get update
 sudo apt-get install libgdal-dev libgeos-dev libproj-dev libtbb-dev libnetcdf-dev
 ```
 <div align = "justify">
-Este projeto foi desenvolvido para contribuir na automatização de análises ambientais em `R`, de modo prático, rápido e eficiente. 
+This project was developed to contribute to the automation of environmental analyses in `R` in a practical, fast, and efficient way.
 </div>
-
-

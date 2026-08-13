@@ -1,20 +1,23 @@
 Package: rgeoamb
 Type: Package
-Title: Base para análise ambiental no R.
-Version: 0.1.2
+Title: Frameworks for Environmental Analyses in R.
+Version: 0.2.6
 Authors@R: 
     person("Jorge da Paixão", "Marques Filho", 
            email = "marquesfilho.j.p@gmail.com", 
            role = c("aut", "cre"))
 Description: Funções automáticas para análise ambiental no R.
-License: GPL (>= 2)
+License: GPL (>= 3)
 URL: https://marquesfilhojp.github.io/rgeoamb/
 BugReports: https://github.com/marquesfilhojp/rgeoamb/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.3.9000
 Imports: 
+    caret,
     terra,
     sf,
     spatialEco,
-    Rsagacmd
+    Rsagacmd,
+    httr2,
+    rstac,
